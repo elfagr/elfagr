@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساب سعر الورق - مكتبة الفجر</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>حساب سعر الورق - مكتبة الفجر</h1>
+    </header>
+
+    <section id="calculator">
+        <form id="paperForm">
+            <label for="paperCount">عدد الأوراق:</label>
+            <input type="number" id="paperCount" name="paperCount" min="1" required>
+
+            <label for="printColor">لون الطباعة:</label>
+            <select id="printColor" name="printColor">
+                <option value="blackWhite">أبيض وأسود</option>
+                <option value="color">ألوان</option>
+            </select>
+
+            <label for="printType">نوع الطباعة:</label>
+            <select id="printType" name="printType">
+                <option value="single">وجه واحد</option>
+                <option value="double">وجهين</option>
+            </select>
+
+            <button type="button" onclick="calculatePrice()">احسب السعر</button>
+        </form>
+
+        <p id="result">السعر الإجمالي: <span id="totalPrice">0</span> جنيه</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
